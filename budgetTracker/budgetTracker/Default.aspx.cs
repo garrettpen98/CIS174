@@ -54,7 +54,7 @@ namespace budgetTracker
             decimal.TryParse(monthlySalaryLabel.Text, out monthlySalary);
             decimal.TryParse(expenseAmountInput.Text, out expenseAmount);
             decimal newMonthlySalary = (monthlySalary - expenseAmount);
-            monthlySalaryLabel.Text = newMonthlySalary.ToString();
+            monthlySalaryLabel.Text = "$" + newMonthlySalary.ToString() + " Left this month";
             expenseAmountInput.Text = String.Empty;
         }
 
