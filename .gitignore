@@ -2,8 +2,12 @@
 Thumbs.db
 ehthumbs.db
 
+# Config files
+applicationhost.config
+
 # Folder config file
 Desktop.ini
+*.suo
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
