@@ -4,10 +4,13 @@ ehthumbs.db
 
 # Config files
 applicationhost.config
+*.suo
+budgetTracker/budgetTracker/obj/Debug/
+budgetTracker/budgetTracker/bin/budgetTracker.dll
+budgetTracker/budgetTracker/bin/budgetTracker.pdb
 
 # Folder config file
 Desktop.ini
-*.suo
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
