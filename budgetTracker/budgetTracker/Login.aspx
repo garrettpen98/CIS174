@@ -10,23 +10,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+        <div><h1>Budget Tracker Login</h1></div>
         <div class="container">
             <div class="center">
                <div class="vert">
-
-                <p>
-                    <asp:Label ID="userNameLabel" CssClass="loginBox" runat="server" Text="User Name:"></asp:Label>
-                    <asp:TextBox ID="userNameBox" runat="server"></asp:TextBox>
-                </p>
-                <p>
-                    <asp:Label ID="passwordLabel" CssClass="loginBox" runat="server" Text="Password"></asp:Label>
-                    <asp:TextBox ID="passwordBox" runat="server" ></asp:TextBox>
-                </p>
-
-                <p>
-                    <asp:Button ID="loginButton" runat="server" Text="Login" OnClick="loginButton_Click" /></p>
+                <table style="margin-left:auto; margin-right:auto;">
+                    <tr>
+                        <td><asp:Label ID="userNamelbl"  runat="server" Text="User Name"></asp:Label></td>
+                        <td><asp:TextBox ID="userNameBox" class="form-control" runat="server"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td><asp:Label ID="passwordlbl"  runat="server" Text="Password"></asp:Label></td>
+                        <td><asp:TextBox ID="passwordBox" class="form-control" runat="server" ></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><asp:Button ID="Button1" runat="server" class="btn btn-primary btn-space" Text="Login" OnClick="loginButton_Click" /></td>
+                    </tr>
+                </table>
                    </div>
             </div>
         </div>

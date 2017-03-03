@@ -22,13 +22,13 @@ namespace budgetTracker {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// userNameLabel control.
+        /// userNamelbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label userNameLabel;
+        protected global::System.Web.UI.WebControls.Label userNamelbl;
         
         /// <summary>
         /// userNameBox control.
@@ -40,13 +40,13 @@ namespace budgetTracker {
         protected global::System.Web.UI.WebControls.TextBox userNameBox;
         
         /// <summary>
-        /// passwordLabel control.
+        /// passwordlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label passwordLabel;
+        protected global::System.Web.UI.WebControls.Label passwordlbl;
         
         /// <summary>
         /// passwordBox control.
@@ -58,12 +58,12 @@ namespace budgetTracker {
         protected global::System.Web.UI.WebControls.TextBox passwordBox;
         
         /// <summary>
-        /// loginButton control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginButton;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
