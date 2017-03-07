@@ -26,6 +26,17 @@
     </div>
     <div class="form-group">
 
+        Please select an expense category
+        <asp:dropdownlist runat="server" id="ddlExpenseCategory">
+            <asp:ListItem Value="other">Other</asp:ListItem>
+            <asp:ListItem Value="home">Home</asp:ListItem>
+            <asp:ListItem Value="auto">Auto</asp:ListItem>
+            <asp:ListItem Value="entertainment">Entertainment</asp:ListItem>
+            <asp:ListItem Value="food">Food</asp:ListItem>
+        </asp:dropdownlist>
+    </div>
+
+    <div class="form-group">
         Please input name of monthly expense&nbsp;
         <asp:TextBox ID="expenseNameInput" class="form-control" runat="server"></asp:TextBox>
         <asp:Label ID="expenseAmountLabel" runat="server" Text="Please enter amount of expense"></asp:Label>
