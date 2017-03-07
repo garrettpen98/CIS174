@@ -52,12 +52,18 @@ namespace budgetTracker
             HtmlTableRow row = new HtmlTableRow();
             HtmlTableCell cell1 = new HtmlTableCell();
             HtmlTableCell cell2 = new HtmlTableCell();
+            HtmlTableCell cell3 = new HtmlTableCell();
+
+            string category = ddlExpenseCategory.SelectedValue.ToString();
             row.ID = "exp"+expenseKey;
             cell1.InnerText = expenseNameInput.Text;
             row.Cells.Add(cell1);
             cell2.InnerText = "$" + expenseAmountInput.Text;
             row.Cells.Add(cell2);
+            cell3.InnerText = category;
+            row.Cells.Add(cell3);
             tableExpenses.Rows.Add(row);
+
         }
 
         //This function updates the remianing monthly budget
