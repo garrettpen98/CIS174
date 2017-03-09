@@ -13,68 +13,17 @@ namespace budgetTracker
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["expenseTable"] != null)
-            {
-                HtmlTable tableExpensesSession = (HtmlTable)Session["expenseTable"];
-                int count = tableExpensesSession.Rows.Count; //need to set count to variable, because it changes
-                for (int i = 0; i < count; i++)
-                {
-                    //Removes from session and then adds to acutal table
-                    //so index will always be 0, because it gets popped off the top
-                    tableExpenses.Rows.Add(tableExpensesSession.Rows[0]); 
-                }
-            }
+
         }
+        //Declaring variables
+        static int expenseKey = 1;
+        //static int j = 1;
 
         //upon clicking save salary button the number in the text box will be stored in a label
         protected void saveSalaryButton_Click(object sender, EventArgs e)
         {
-            decimal salaryToAdd = Decimal.Parse(salaryInput.Text),
-                   currentSalary = Decimal.Parse(salaryTotalAmt.Value),
-                   salary = salaryToAdd + currentSalary;
-            monthlySalaryLabel.Text = salary.ToString("c");
-            salaryTotalAmt.Value = salary.ToString();
+            monthlySalaryLabel.Text = salaryInput.Text;
             salaryInput.Text = String.Empty;
-        }
-
-        private void addExpense()
-        {
-            HtmlTableRow row = new HtmlTableRow();
-            HtmlTableCell cell1 = new HtmlTableCell();
-            HtmlTableCell cell2 = new HtmlTableCell();
-            HtmlTableCell cell3 = new HtmlTableCell();
-            decimal expenseAmount = Decimal.Parse(expenseAmountInput.Text);
-            string category = ddlExpenseCategory.SelectedValue.ToString();
-
-            row.ID = "exp" + (tableExpenses.Rows.Count + 1);
-            cell1.InnerText = expenseNameInput.Text;
-            row.Cells.Add(cell1);
-            cell2.InnerText = expenseAmount.ToString("c");
-            row.Cells.Add(cell2);
-            cell3.InnerText = category;
-            row.Cells.Add(cell3);
-            tableExpenses.Rows.Add(row);
-            Session["expenseTable"] = tableExpenses;
-        }
-
-        //This function updates the remianing monthly budget
-        private void updateRemainingBudget()
-        {
-            decimal expenseAmount = Decimal.Parse(expenseAmountInput.Text),
-                    currentSalary = Decimal.Parse(salaryTotalAmt.Value),
-                    newSalary = currentSalary - expenseAmount;
-            monthlySalaryLabel.Text = newSalary.ToString("c");
-            salaryTotalAmt.Value = newSalary.ToString();
-            expenseAmountInput.Text = String.Empty;
-            expenseNameInput.Text = String.Empty;
-        }
-
-        protected void addExpenseButton_Click(object sender, EventArgs e)
-        {
-            //addExpenseNameLabel();
-            //addExpenseAmountLabel();
-            addExpense();
-            updateRemainingBudget();
         }
 
         /*//This function adds a new label for every expense
@@ -97,5 +46,44 @@ namespace budgetTracker
             this.Controls.Add(lbl);
             j++;
         }*/
+
+        private void addExpense()
+        {
+            HtmlTableRow row = new HtmlTableRow();
+            HtmlTableCell cell1 = new HtmlTableCell();
+            HtmlTableCell cell2 = new HtmlTableCell();
+            HtmlTableCell cell3 = new HtmlTableCell();
+
+            string category = ddlExpenseCategory.SelectedValue.ToString();
+            row.ID = "exp"+expenseKey;
+            cell1.InnerText = expenseNameInput.Text;
+            row.Cells.Add(cell1);
+            cell2.InnerText = "$" + expenseAmountInput.Text;
+            row.Cells.Add(cell2);
+            cell3.InnerText = category;
+            row.Cells.Add(cell3);
+            tableExpenses.Rows.Add(row);
+
+        }
+
+        //This function updates the remianing monthly budget
+        private void updateRemainingBudget()
+        {
+            decimal monthlySalary;
+            decimal expenseAmount;
+            decimal.TryParse(monthlySalaryLabel.Text, out monthlySalary);
+            decimal.TryParse(expenseAmountInput.Text, out expenseAmount);
+            decimal newMonthlySalary = (monthlySalary - expenseAmount);
+            monthlySalaryLabel.Text = "$" + newMonthlySalary.ToString() + " Left this month";
+            expenseAmountInput.Text = String.Empty;
+        }
+
+        protected void addExpenseButton_Click(object sender, EventArgs e)
+        {
+            //addExpenseNameLabel();
+            //addExpenseAmountLabel();
+            addExpense();
+            updateRemainingBudget();
+        }
     }
 }

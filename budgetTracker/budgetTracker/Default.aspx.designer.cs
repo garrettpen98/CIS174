@@ -22,6 +22,15 @@ namespace budgetTracker {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// salary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label salary;
+        
+        /// <summary>
         /// salaryInput control.
         /// </summary>
         /// <remarks>
@@ -29,24 +38,6 @@ namespace budgetTracker {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox salaryInput;
-        
-        /// <summary>
-        /// reqSalaryInput control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqSalaryInput;
-        
-        /// <summary>
-        /// regExSalaryInput control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator regExSalaryInput;
         
         /// <summary>
         /// saveSalaryButton control.
@@ -67,15 +58,6 @@ namespace budgetTracker {
         protected global::System.Web.UI.WebControls.Label monthlySalaryLabel;
         
         /// <summary>
-        /// salaryTotalAmt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField salaryTotalAmt;
-        
-        /// <summary>
         /// ddlExpenseCategory control.
         /// </summary>
         /// <remarks>
@@ -83,15 +65,6 @@ namespace budgetTracker {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlExpenseCategory;
-        
-        /// <summary>
-        /// reqDdlExpenseCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDdlExpenseCategory;
         
         /// <summary>
         /// expenseNameInput control.
@@ -103,13 +76,13 @@ namespace budgetTracker {
         protected global::System.Web.UI.WebControls.TextBox expenseNameInput;
         
         /// <summary>
-        /// reqExpenseNameInput control.
+        /// expenseAmountLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqExpenseNameInput;
+        protected global::System.Web.UI.WebControls.Label expenseAmountLabel;
         
         /// <summary>
         /// expenseAmountInput control.
@@ -119,24 +92,6 @@ namespace budgetTracker {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox expenseAmountInput;
-        
-        /// <summary>
-        /// reqExpenseAmountInput control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqExpenseAmountInput;
-        
-        /// <summary>
-        /// regExExpenseAmountInput control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator regExExpenseAmountInput;
         
         /// <summary>
         /// addExpenseButton control.
